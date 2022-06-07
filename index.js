@@ -1,22 +1,22 @@
 //LIFO
 class Stack {
-    #list = [];
+    stack = [];
 
-    constructor(initiallist) {
-        if (initiallist) this.#list = initiallist;
+    constructor(initialstack) {
+        if (initialstack) this.stack = initialstack;
     }
 
     // methods
-    push(item) {
-        this.#list.push(item);
+    addItem(item) {
+        this.stack.push(item);
     }
 
-    pop() {
-        this.#list.pop();
+    removeItem() {
+        return this.stack.pop();
     }
 
     peek() {
-        return this.#list[this.#list.length - 1];
+        return this.stack[this.stack.length - 1];
     }
 }
 
