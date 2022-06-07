@@ -1,22 +1,22 @@
 //LIFO
 class Stack {
-    stack = [];
+    #stack = [];
 
-    constructor(initialstack) {
-        if (initialstack) this.stack = initialstack;
+    constructor(initialStack) {
+        if (initialStack) this.#stack = initialStack;
     }
 
     // methods
-    addItem(item) {
-        this.stack.push(item);
+    push(item) {
+        this.#stack.push(item);
     }
 
-    removeItem() {
-        return this.stack.pop();
+    pop() {
+        return this.#stack.pop();
     }
 
     peek() {
-        return this.stack[this.stack.length - 1];
+        return this.#stack[this.#stack.length - 1];
     }
 }
 
@@ -34,11 +34,11 @@ class Queue {
     }
 
     dequeue() {
-        this.#queue.shift();
+        return this.#queue.shift();
     }
 
     hasNext() {
-        this.#queue.length() > 0 ? true : false;
+        return this.#queue.length > 0 ? true : false;
     }
 }
 
