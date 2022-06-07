@@ -6,4 +6,9 @@ describe("Stack Class", () => {
     expect(stack.peek()).toEqual(1);
   });
   // add more tests here...
+  it("#pop should remove an item from the stack ", () => {
+    const stack = new Stack();
+    stack.push(1);
+    expect(stack.pop()).toEqual(1);
+  });
 });

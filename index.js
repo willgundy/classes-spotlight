@@ -1,27 +1,45 @@
 //LIFO
 class Stack {
-    #stack = [];
+    #list = [];
 
-    constructor(initialStack) {
-        if (initialStack) this.#stack = initialStack;
+    constructor(initiallist) {
+        if (initiallist) this.#list = initiallist;
     }
 
     // methods
     push(item) {
-        this.#stack.push(item);
+        this.#list.push(item);
     }
 
-    pop(item) {
-        this.#stack.pop(item);
+    pop() {
+        this.#list.pop();
     }
 
     peek() {
-        this.#stack.peekBack();
+        return this.#list[this.#list.length - 1];
     }
 }
 
 //FIFO
 class Queue {
+    #queue = [];
+
+    constructor(initialQueue) {
+        if (initialQueue) this.#queue = initialQueue;
+    }
+
+    //methods
+    enqueue(item) {
+        this.#queue.push(item);
+    }
+
+    dequeue() {
+        this.#queue.shift();
+    }
+
+    hasNext() {
+        this.#queue.length() > 0 ? true : false;
+    }
 }
 
 module.exports = { Stack, Queue };
