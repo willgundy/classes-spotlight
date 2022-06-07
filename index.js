@@ -7,11 +7,11 @@ class Stack {
     }
 
     // methods
-    addItem(item) {
+    push(item) {
         this.#stack.push(item);
     }
 
-    removeItem(item) {
+    pop(item) {
         this.#stack.pop(item);
     }
 
@@ -22,24 +22,6 @@ class Stack {
 
 //FIFO
 class Queue {
-    #queue = [];
-
-    constructor(initialQueue) {
-        if (initialQueue) this.#queue = initialQueue;
-    }
-
-    //methods
-    enqueue(item) {
-        this.#queue.push(item);
-    }
-
-    dequeue(item) {
-        this.#queue.shift(item);
-    }
-
-    hasNext() {
-        this.#queue.length() > 0 ? true : false;
-    }
 }
 
 module.exports = { Stack, Queue };
