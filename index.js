@@ -38,7 +38,7 @@ class Queue {
     }
 
     hasNext() {
-        return this.#queue.length > 0 ? true : false;
+        return this.#queue.length > 0;
     }
 }
 
