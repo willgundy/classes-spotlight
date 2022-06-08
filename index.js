@@ -18,6 +18,11 @@ class Stack {
     peek() {
         return this.#stack[this.#stack.length - 1];
     }
+
+    // reverse() {
+    //     const reversedArray = [];
+    //     this.#stack.forEach(reversedArray.);
+    // }
 }
 
 //FIFO
@@ -42,4 +47,14 @@ class Queue {
     }
 }
 
-module.exports = { Stack, Queue };
+function reverse(array) {
+    const reversedArray = []
+    for (let i = array.length - 1; i >= 0; i--) {
+        reversedArray.push(array[i]);
+    }
+    return reversedArray;
+}
+
+reverse([3,2,1]);
+
+module.exports = { Stack, Queue, reverse };
